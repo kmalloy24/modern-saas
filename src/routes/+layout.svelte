@@ -12,6 +12,7 @@
 	  Chevron,
 	  DropdownItem,
 	} from "flowbite-svelte";
+	import { Toaster } from "svelte-french-toast";
 	import type { LayoutData } from "./$types";
 	import { onMount } from "svelte";
 	import { invalidate } from "$app/navigation";
@@ -37,6 +38,8 @@
   <svelte:head>
 	<title>Contactly</title>
   </svelte:head>
+
+  <Toaster />
   
   <div class="flex h-full flex-col">
 	<Navbar let:hidden let:toggle>

@@ -8,5 +8,5 @@ export const POST: RequestHandler = async (event) => {
 		throw error(500, "Error logging you out. Please try again.");
 	}
 
-	throw redirect(302, "/login");
+	throw redirect(302, "/");
 };

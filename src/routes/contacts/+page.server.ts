@@ -3,11 +3,12 @@ import type { Actions, PageServerLoad } from "./$types";
 import { setError, superValidate } from "sveltekit-superforms/server";
 import { createContactSchema, deleteContactSchema } from "$lib/schemas";
 import { supabaseAdmin } from "$lib/server/supabase-admin";
+import { handleLoginRedirect } from "$lib/helpers";
 
 export const load: PageServerLoad = async (event) => {
 	const session = await event.locals.getSession();
 	if (!session) {
-		throw redirect(302, "/login");
+		throw redirect(302, handleLoginRedirect(event));
 	}
 
 	async function getContacts() {
