@@ -59,6 +59,7 @@
 		"flowbite": "^1.8.1",
 		"flowbite-svelte": "^0.34.12",
 		"stripe": "^12.18.0",
-		"svelte-french-toast": "1.0.4-beta.0"
+		"svelte-french-toast": "1.0.4-beta.0",
+		"vercel": "^32.5.5"
 	}
 }
